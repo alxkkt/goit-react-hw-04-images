@@ -2,11 +2,15 @@
   "name": "hw-04-images",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zeddjke.github.io/goit-react-hw-04-images/",
+  "homepage": "https://alxkkt.github.io/goit-react-hw-04-images/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^28.1.7",
+    "@types/node": "^18.7.6",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "axios": "^0.27.2",
     "eslint": "^8.15.0",
     "modern-normalize": "^1.1.0",
@@ -16,6 +20,7 @@
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0",
     "spinners-react": "^1.0.7",
+    "typescript": "^4.7.4",
     "web-vitals": "^2.1.3"
   },
   "scripts": {

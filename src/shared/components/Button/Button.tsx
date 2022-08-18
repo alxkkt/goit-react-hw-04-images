@@ -1,8 +1,13 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 
 import styles from './Button.module.css';
 
-const Button = ({ text, loadMore }) => {
+interface IProps {
+  text: string;
+  loadMore: () => void;
+}
+
+const Button = ({ text, loadMore }: IProps) => {
   return (
     <button onClick={loadMore} className={styles.Button}>
       {text}
@@ -11,8 +16,3 @@ const Button = ({ text, loadMore }) => {
 };
 
 export default Button;
-
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-};

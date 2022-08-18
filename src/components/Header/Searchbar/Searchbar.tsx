@@ -1,20 +1,26 @@
-import { useState, memo } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, memo } from 'react';
 
 import styles from './Searchbar.module.css';
 
-const Searchbar = ({ onSubmit }) => {
+interface IProps {
+  onSubmit: (param: string) => void;
+}
+
+const Searchbar = ({ onSubmit }: IProps) => {
   const [query, setQuery] = useState('');
 
-  const handleSubmit = e => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     onSubmit(query);
   };
-  const handleChange = e => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
 
     setQuery(value);
   };
+  
   return (
     <form className={styles.SearchForm} onSubmit={handleSubmit}>
       <button type="submit" className={styles.SearchFormButton}>
@@ -35,7 +41,3 @@ const Searchbar = ({ onSubmit }) => {
 };
 
 export default memo(Searchbar);
-
-Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
